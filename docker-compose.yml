@@ -1,0 +1,5 @@
+services:
+  madara-devnet:
+    image: ghcr.io/madara-alliance/madara:latest
+    restart: unless-stopped
+    command: "--sequencer --no-l1-sync --preset devnet "
