@@ -12,3 +12,4 @@ cairo-vm = { git = "https://github.com/Moonsong-Labs/cairo-vm", branch = "notles
 ] }
 tokio = { version = "1.0.0", features = ["rt", "rt-multi-thread", "macros"] }
 serde_json = "1.0.133"
+starknet = "0.12.0"

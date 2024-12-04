@@ -1,5 +1,56 @@
+networks:
+  apstark:
+    driver: bridge
 services:
-  madara-devnet:
-    image: ghcr.io/madara-alliance/madara:latest
+  madara:
+    image: sotazklabs/madara:latest
+    networks:
+      - apstark
     restart: unless-stopped
-    command: "--sequencer --no-l1-sync --preset devnet "
+    ports:
+      - "9944:9944"
+    command: [
+      "--devnet",
+      "--name=madara",
+      "--base-path=../madara_db",
+      "--preset=devnet",
+      "--rpc-port=9944",
+      "--rpc-methods=unsafe",
+      "--rpc-cors='*'",
+      "--rpc-external",
+      "--no-l1-sync",
+      "--feeder-gateway-enable",
+      "--gateway-enable",
+      "--gateway-external",
+      "--telemetry-disabled",
+    ]
+
+  pathfinder:
+    image: sotazklabs/pathfinder:latest
+    networks:
+      - apstark
+    restart: unless-stopped
+    ports:
+      - "9545:9545"
+    environment:
+      RUST_LOG: info
+      FEEDER_GATEWAY_URL: http://madara:8080/feeder_gateway
+      GATEWAY_URL: http://madara:8080/gateway
+    command: [
+      '--network',
+      'custom',
+      '--chain-id',
+      'MADARA_DEVNET',
+      '--feeder-gateway-url',
+      '${FEEDER_GATEWAY_URL}',
+      '--gateway-url',
+      '${GATEWAY_URL}',
+      '--storage.state-tries',
+      'archive',
+      '--data-directory',
+      './pathfinder-db'
+    ]
+    entrypoint: "tail -F anything"
+
+    depends_on:
+      - madara
