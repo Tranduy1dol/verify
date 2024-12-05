@@ -32,15 +32,13 @@ services:
     restart: unless-stopped
     ports:
       - "9545:9545"
-    environment:
-      RUST_LOG: info
-      FEEDER_GATEWAY_URL: http://madara:8080/feeder_gateway
-      GATEWAY_URL: http://madara:8080/gateway
+    env_file:
+      - .env
     command: [
       '--network',
       'custom',
       '--chain-id',
-      'MADARA_DEVNET',
+      '${MADARA_CHAIN_ID}',
       '--feeder-gateway-url',
       '${FEEDER_GATEWAY_URL}',
       '--gateway-url',
@@ -50,7 +48,6 @@ services:
       '--data-directory',
       './pathfinder-db'
     ]
-    entrypoint: "tail -F anything"
 
     depends_on:
       - madara
