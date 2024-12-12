@@ -1,2 +1,11 @@
-sncast --wait --profile account1 declare --url $RPC_URL --fee-token strk --contract-name test
-stone-cli prove-bootloader --cairo_pies ./cairo_pie.zip --layout starknet-with-keccak --parameter_file ./tests/configs/bootloader_cpu_air_params_layout_starknet_with_keccak.json --output bootloader_proof.json --fact_topologies_output fact_topologies.json
+# Generate os-latest.json
+    `make gen-os`
+# Run Madara and Pathfinder
+    `make run-madara`
+    `make run-pathfinder`
+# Do transactions on Madara
+    `make txs`
+[!NOTE] Need to install `dojo`, `scarb`.
+# Clear database
+    `make clean`
+### Before doing anything above, please run `git submodule update --init --recursive`.

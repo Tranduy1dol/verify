@@ -1,0 +1,9 @@
+[submodule "madara"]
+	path = madara
+	url = git@github.com:sota-zk-labs/madara.git
+[submodule "pathfinder"]
+	path = pathfinder
+	url = git@github.com:Tranduy1dol/pathfinder.git
+[submodule "cairo-lang"]
+	path = cairo-lang
+	url = https://github.com/starkware-libs/cairo-lang
