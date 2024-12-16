@@ -4,8 +4,8 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-prove_block = { git = "https://github.com/keep-starknet-strange/snos", rev = "662d1706f5855044e52ebf688a18dd80016c8700" }
-cairo-vm = { git = "https://github.com/Moonsong-Labs/cairo-vm", branch = "notlesh/segment-arena-relocation-fix", features = [
+prove_block = { git = "https://github.com/Tranduy1dol/snos", branch = "td1d/new" }
+cairo-vm = { git = "https://github.com/Tranduy1dol/cairo-vm", branch = "td1d/new", features = [
     "cairo-1-hints",
     "extensive_hints",
     "mod_builtin",

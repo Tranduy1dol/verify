@@ -1069,7 +1069,7 @@ dependencies = [
 [[package]]
 name = "cairo-type-derive"
 version = "0.1.0"
-source = "git+https://github.com/keep-starknet-strange/snos?rev=662d1706f5855044e52ebf688a18dd80016c8700#662d1706f5855044e52ebf688a18dd80016c8700"
+source = "git+https://github.com/Tranduy1dol/snos?branch=td1d/new#34e5f36cf5e678ed003b2da576423fab36e03d76"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -1110,7 +1110,7 @@ dependencies = [
 [[package]]
 name = "cairo-vm"
 version = "1.0.1"
-source = "git+https://github.com/Moonsong-Labs/cairo-vm?branch=notlesh/segment-arena-relocation-fix#01ea1e0c6b31029a6e22710410a4f5ec72a9cc59"
+source = "git+https://github.com/Tranduy1dol/cairo-vm?branch=td1d/new#d460491a401ed20be8e9903eebcb84b3dd2f6e39"
 dependencies = [
  "anyhow",
  "ark-ff",
@@ -3190,13 +3190,13 @@ dependencies = [
 [[package]]
 name = "prove_block"
 version = "0.1.0"
-source = "git+https://github.com/keep-starknet-strange/snos?rev=662d1706f5855044e52ebf688a18dd80016c8700#662d1706f5855044e52ebf688a18dd80016c8700"
+source = "git+https://github.com/Tranduy1dol/snos?branch=td1d/new#34e5f36cf5e678ed003b2da576423fab36e03d76"
 dependencies = [
  "anyhow",
  "blockifier",
  "cairo-lang-starknet-classes",
  "cairo-lang-utils",
- "cairo-vm 1.0.1 (git+https://github.com/Moonsong-Labs/cairo-vm?branch=notlesh/segment-arena-relocation-fix)",
+ "cairo-vm 1.0.1 (git+https://github.com/Tranduy1dol/cairo-vm?branch=td1d/new)",
  "clap",
  "env_logger",
  "futures-core",
@@ -3520,7 +3520,7 @@ dependencies = [
 [[package]]
 name = "rpc-client"
 version = "0.1.0"
-source = "git+https://github.com/keep-starknet-strange/snos?rev=662d1706f5855044e52ebf688a18dd80016c8700#662d1706f5855044e52ebf688a18dd80016c8700"
+source = "git+https://github.com/Tranduy1dol/snos?branch=td1d/new#34e5f36cf5e678ed003b2da576423fab36e03d76"
 dependencies = [
  "log",
  "reqwest 0.11.27",
@@ -3535,7 +3535,7 @@ dependencies = [
 [[package]]
 name = "rpc-replay"
 version = "0.1.0"
-source = "git+https://github.com/keep-starknet-strange/snos?rev=662d1706f5855044e52ebf688a18dd80016c8700#662d1706f5855044e52ebf688a18dd80016c8700"
+source = "git+https://github.com/Tranduy1dol/snos?branch=td1d/new#34e5f36cf5e678ed003b2da576423fab36e03d76"
 dependencies = [
  "blockifier",
  "cairo-lang-starknet-classes",
@@ -4416,7 +4416,7 @@ dependencies = [
 [[package]]
 name = "starknet-os"
 version = "0.1.0"
-source = "git+https://github.com/keep-starknet-strange/snos?rev=662d1706f5855044e52ebf688a18dd80016c8700#662d1706f5855044e52ebf688a18dd80016c8700"
+source = "git+https://github.com/Tranduy1dol/snos?branch=td1d/new#34e5f36cf5e678ed003b2da576423fab36e03d76"
 dependencies = [
  "anyhow",
  "ark-ec",
@@ -4431,7 +4431,7 @@ dependencies = [
  "cairo-lang-starknet",
  "cairo-lang-starknet-classes",
  "cairo-type-derive",
- "cairo-vm 1.0.1 (git+https://github.com/Moonsong-Labs/cairo-vm?branch=notlesh/segment-arena-relocation-fix)",
+ "cairo-vm 1.0.1 (git+https://github.com/Tranduy1dol/cairo-vm?branch=td1d/new)",
  "futures",
  "futures-util",
  "heck 0.4.1",
@@ -4465,11 +4465,11 @@ dependencies = [
 [[package]]
 name = "starknet-os-types"
 version = "0.1.0"
-source = "git+https://github.com/keep-starknet-strange/snos?rev=662d1706f5855044e52ebf688a18dd80016c8700#662d1706f5855044e52ebf688a18dd80016c8700"
+source = "git+https://github.com/Tranduy1dol/snos?branch=td1d/new#34e5f36cf5e678ed003b2da576423fab36e03d76"
 dependencies = [
  "blockifier",
  "cairo-lang-starknet-classes",
- "cairo-vm 1.0.1 (git+https://github.com/Moonsong-Labs/cairo-vm?branch=notlesh/segment-arena-relocation-fix)",
+ "cairo-vm 1.0.1 (git+https://github.com/Tranduy1dol/cairo-vm?branch=td1d/new)",
  "flate2",
  "num-bigint",
  "serde",
@@ -5175,7 +5175,7 @@ dependencies = [
 name = "verify"
 version = "0.1.0"
 dependencies = [
- "cairo-vm 1.0.1 (git+https://github.com/Moonsong-Labs/cairo-vm?branch=notlesh/segment-arena-relocation-fix)",
+ "cairo-vm 1.0.1 (git+https://github.com/Tranduy1dol/cairo-vm?branch=td1d/new)",
  "prove_block",
  "serde_json",
  "starknet 0.12.0",

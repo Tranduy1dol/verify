@@ -24,6 +24,7 @@ gen-os-v0.13.2:
 txs:
 	export RUST_LOG="" && \
 	cd contract && \
+	scarb run migrate && \
 	scarb run spawn
 run:
 	cargo +nightly run -- 11
